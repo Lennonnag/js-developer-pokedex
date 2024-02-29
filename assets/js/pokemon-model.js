@@ -9,4 +9,7 @@ class Pokemon {
     ability = [];
     stats;
     stat = [];
+
+    statsNum;
+    statNum = [];
 }

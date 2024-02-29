@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    
+
 }
 
 .normal {
@@ -86,7 +86,7 @@
     padding: 1rem;
     border-radius: 1rem;
     position: relative;
-   }
+}
 
 .pokemon .number {
     color: #000;
@@ -148,9 +148,9 @@
     border-radius: 1rem;
 }
 
-.pokemon .detailStats{
-    list-style: none;
+.pokemon .stats {
     text-transform: capitalize;
+    display: flex;
 
     visibility: hidden;
     -webkit-transition: opacity 0.5s linear;
@@ -167,30 +167,62 @@
 
     top: 1rem;
     left: 0.4rem;
-    font-size: 0.625rem;
-
+    font-size: 0.625rem;    
+    height: 10rem;
+    width: 11rem;
 }
+
 .status {
-    font-size: 1rem;    
-    position: relative;
+    font-size: 1rem;
+    position: absolute;
     top: 0.2rem;
-    }
+}
 
 
-.pokemon:hover .detailStats {
+.pokemon:hover .stats {
     visibility: visible;
     opacity: 0.85;
 }
 
-.statName {
+
+.ability {
     padding-right: 2rem;
     padding-top: 0.2rem;
 }
 
-.ability{
-    padding-right: 2rem;
-    padding-top: 0.2rem;
+/*UL STATUS */
+.statsName {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    top: 2rem;
+    text-align: right;
 }
+
+.statName {
+    margin: 0.1rem;
+    padding: 0; 
+}
+
+
+.statsNum {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 2rem;
+    left: 5.5rem;
+    width: 5.2rem;
+    
+}
+.statNum {   
+    margin: 0.1rem;
+    padding: 0px;
+    background-color: #4CAF50;
+    border-radius: 3px;
+    width: 0%;
+    text-align: center;    
+}
+
 
 @media screen and (min-width: 380px) {
     .pokemons {

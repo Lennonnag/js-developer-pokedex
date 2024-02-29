@@ -1,19 +1,24 @@
 
 const pokeApi = {}
 
+
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
-    pokemon.name = pokeDetail.name  
-     
+    pokemon.name = pokeDetail.name
+
 
     const abilities = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name)
-    const [ability] = abilities;    
+    const [ability] = abilities;
 
-    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)    
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
     const [type] = types
-    
-    const stats = pokeDetail.stats.map((statSlot) => statSlot.stat.name.concat(": ",statSlot.base_stat))
+
+    const statsNum = pokeDetail.stats.map((slot) => slot.base_stat)
+    const [statNum] = statsNum
+
+    const stats = pokeDetail.stats.map((statSlot) => statSlot.stat.name)
+    ///const stats = pokeDetail.stats.map((statSlot) => statSlot.stat.name.concat(": ",statSlot.base_stat))
     const [stat] = stats
 
     pokemon.types = types
@@ -25,16 +30,12 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.stats = stats
     pokemon.stat = stat
 
-    
-     
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default    
+    pokemon.statsNum = statsNum
+    pokemon.statNum = statNum
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
-  
-    
     return pokemon
 }
-
-
 
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)
