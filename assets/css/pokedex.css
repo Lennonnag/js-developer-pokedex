@@ -161,7 +161,7 @@
     position: absolute;
     background-color: white;
     margin: 0.5rem;
-    padding: 1rem;
+    padding-left: 0.5rem;
     border-radius: 0.3rem;
     opacity: 0;
 
@@ -171,13 +171,25 @@
 
 }
 .status {
-    font-size: 1rem;
+    font-size: 1rem;    
+    position: relative;
+    top: 0.2rem;
     }
 
 
 .pokemon:hover .detailStats {
     visibility: visible;
     opacity: 0.85;
+}
+
+.statName {
+    padding-right: 2rem;
+    padding-top: 0.2rem;
+}
+
+.ability{
+    padding-right: 2rem;
+    padding-top: 0.2rem;
 }
 
 @media screen and (min-width: 380px) {
