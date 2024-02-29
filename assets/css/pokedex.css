@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }
 
 .normal {
@@ -84,7 +85,8 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
-}
+    position: relative;
+   }
 
 .pokemon .number {
     color: #000;
@@ -144,6 +146,38 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+.pokemon .detailStats{
+    list-style: none;
+    text-transform: capitalize;
+
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
+
+    position: absolute;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    opacity: 0;
+
+    top: 1rem;
+    left: 0.4rem;
+    font-size: 0.625rem;
+
+}
+.status {
+    font-size: 1rem;
+    }
+
+
+.pokemon:hover .detailStats {
+    visibility: visible;
+    opacity: 0.85;
 }
 
 @media screen and (min-width: 380px) {
