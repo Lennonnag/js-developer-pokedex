@@ -165,10 +165,10 @@
     border-radius: 0.3rem;
     opacity: 0;
 
-    top: 1rem;
-    left: 0.4rem;
-    font-size: 0.625rem;    
-    height: 10rem;
+
+    left: 1.4rem;
+    font-size: 0.625rem;
+    height: 9rem;
     width: 11rem;
 }
 
@@ -195,13 +195,13 @@
     list-style: none;
     padding: 0;
     position: relative;
-    top: 2rem;
+    top: 1.3rem;
     text-align: right;
 }
 
 .statName {
     margin: 0.1rem;
-    padding: 0; 
+    padding: 0;
 }
 
 
@@ -209,19 +209,43 @@
     list-style: none;
     padding: 0;
     position: absolute;
-    top: 2rem;
+    top: 1.3rem;
     left: 5.5rem;
     width: 5.2rem;
-    
+
 }
-.statNum {   
+
+.statNum {
     margin: 0.1rem;
     padding: 0px;
-    background-color: #4CAF50;
     border-radius: 3px;
-    width: 0%;
-    text-align: center;    
+    text-align: center;
+    animation: progress 1500ms;    
+    background: #007510;        
 }
+
+.attackName {
+    font-size: 1rem;
+    position: absolute;
+    top: 6.5rem;
+}
+
+
+.abilitiesName {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    top: 6.5rem;
+    text-align: right;
+}
+
+@keyframes progress {
+   from{width: 0%;}   
+    to{width: attr(width)}
+}
+
+
+
 
 
 @media screen and (min-width: 380px) {

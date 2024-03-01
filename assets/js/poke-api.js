@@ -24,7 +24,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.types = types
     pokemon.type = type
 
-    pokemon.abilites = abilities
+    pokemon.abilities = abilities
     pokemon.ability = ability
 
     pokemon.stats = stats
